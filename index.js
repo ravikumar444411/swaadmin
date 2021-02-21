@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const adminRoute = require('./api/routes/admin')
+// const adminRoute = require('./api/routes/admin')
 
 app.set('port',process.env.PORT || 8000);
 var port = app.get('port');
