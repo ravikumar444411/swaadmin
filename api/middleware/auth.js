@@ -1,6 +1,7 @@
-var jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
-exports.checkAuth= (req,res,next) =>{
+// exports.checkAuth= (req,res,next) =>{
+module.exports = (req,res,next) =>{
 
     try{
     var token = req.headers.authorization.split(" ")[1];
@@ -14,4 +15,4 @@ exports.checkAuth= (req,res,next) =>{
             error: "Invalid token"
         })
     }
-}
+};
