@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const adminController = require("./api/controller/admin")
-var checkCon = require("./api/middleware/auth")
+// const adminController = require("./api/controller/admin")
+const {checkAuth} = require("./api/middleware/auth")
 
 
 app.set('port',process.env.PORT || 8000);
