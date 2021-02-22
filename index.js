@@ -1,7 +1,5 @@
 const express = require("express");
 const app = express();
-
-const {checkAuth} = require("./api/middleware/auth")
 const adminRoute = require("./api/routes/admin")
 
 

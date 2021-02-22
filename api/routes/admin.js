@@ -1,6 +1,6 @@
 const express = require("express");
-// const router = express.Router();
-const router = express();
+const router = express.Router();
+// const router = express();
 var checkAuth = require("../middleware/auth")
 const adminController = require("../controller/admin")
 
