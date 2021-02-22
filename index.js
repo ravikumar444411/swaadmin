@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-var checkAuth = require("../middleware/auth")
 var checkAuth = require("./api/middleware/auth")
 const adminController = require("./api/controller/admin")
 // const adminRoute = require('./api/routes/admin')
