@@ -1,7 +1,13 @@
 const express = require("express");
 const app = express();
+const mongoose = require("mongoose");
+const bodyParser = require('body-parser')
 const adminRoute = require("./api/routes/admin")
 
+app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// parse application/json
+app.use(bodyParser.json())
 
 app.set('port',process.env.PORT || 8000);
 var port = app.get('port');
