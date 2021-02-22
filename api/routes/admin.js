@@ -11,7 +11,7 @@ router.get('/',(req,res)=>{
 })
 
 //update  admin
-router.put('/:id',checkAuth,adminController.updateAdmin);
+router.put('/:id',adminController.updateAdmin);
 
 // login request
 router.post('/login',adminController.loginAdmin)
