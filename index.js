@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
-// const adminController = require("./api/controller/admin")
+
 const {checkAuth} = require("./api/middleware/auth")
 
 
 app.set('port',process.env.PORT || 8000);
 var port = app.get('port');
 
-// app.use('/admin',checkCon.checkAuth);
+
 
 app.get('/',(req,res)=>{
     res.send('<h1>Hello world 3 </h1>');
