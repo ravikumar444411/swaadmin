@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const {checkAuth} = require("./api/middleware/auth")
+// const {checkAuth} = require("./api/middleware/auth")
 
 
 app.set('port',process.env.PORT || 8000);
