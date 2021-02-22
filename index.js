@@ -19,15 +19,15 @@ app.get('/check',(req,res)=>{
 
 
 
-// mongoose.connect('mongodb+srv://ravi:Ravi12345@cluster0.hioak.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://ravi:Ravi12345@cluster0.hioak.mongodb.net/test?retryWrites=true&w=majority')
 
 
-// mongoose.connection.on('error',err=>{
-//     console.log('error found')
-// });
-// mongoose.connection.on('connected',connected=>{
-//     console.log('conntected database')
-// });
+mongoose.connection.on('error',err=>{
+    console.log('error found')
+});
+mongoose.connection.on('connected',connected=>{
+    console.log('conntected database')
+});
 
 
 
