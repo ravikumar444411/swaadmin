@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const categoryRoute = require('./api/routes/category')
 const voucherRoute = require('./api/routes/voucher')
 const vendorRoute = require('./api/routes/vendor')
 const userRoute = require('./api/routes/user')
 const adminRoute = require('./api/routes/admin')
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }))
  
