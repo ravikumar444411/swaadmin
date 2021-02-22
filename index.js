@@ -2,7 +2,12 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser')
-const adminRoute = require("./api/routes/admin")
+
+const categoryRoute = require('./api/routes/category')
+const voucherRoute = require('./api/routes/voucher')
+const vendorRoute = require('./api/routes/vendor')
+const userRoute = require('./api/routes/user')
+const adminRoute = require('./api/routes/admin')
 
 app.use(bodyParser.urlencoded({ extended: false }))
  
@@ -12,7 +17,16 @@ app.use(bodyParser.json())
 app.set('port',process.env.PORT || 8000);
 var port = app.get('port');
 
+
+app.use('/voucher',voucherRoute);
+app.use('/category',categoryRoute);
 app.use('/admin',adminRoute);
+app.use('/user',userRoute);
+app.use('/vendor',vendorRoute);
+
+
+
+
 
 app.get('/',(req,res)=>{
     res.send('<h1>Hello world 3 </h1>');
